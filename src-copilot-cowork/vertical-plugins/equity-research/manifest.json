@@ -1,0 +1,65 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.1.3",
+  "id": "ee48b8ca-e843-5157-8eff-2488701b21d5",
+  "packageName": "com.cowork.plugin.equity-research",
+  "developer": {
+    "name": "Cowork Conversion",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/terms",
+    "contactInfo": {
+      "defaultSupport": {
+        "emailsForEmailSupport": [
+          "equity-research@contoso.com"
+        ],
+        "userEmailsForChatSupport": [
+          "equity-research@contoso.com"
+        ]
+      }
+    }
+  },
+  "name": {
+    "short": "Equity Research",
+    "full": "Equity Research"
+  },
+  "description": {
+    "short": "Equity research tools: earnings analysis, initiating coverage reports, and",
+    "full": "Equity research tools: earnings analysis, initiating coverage reports, and research workflows"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4A90D9",
+  "agentSkills": [
+    {
+      "folder": "./skills/catalyst-calendar"
+    },
+    {
+      "folder": "./skills/earnings-analysis"
+    },
+    {
+      "folder": "./skills/earnings-preview"
+    },
+    {
+      "folder": "./skills/idea-generation"
+    },
+    {
+      "folder": "./skills/initiating-coverage"
+    },
+    {
+      "folder": "./skills/model-update"
+    },
+    {
+      "folder": "./skills/morning-note"
+    },
+    {
+      "folder": "./skills/sector-overview"
+    },
+    {
+      "folder": "./skills/thesis-tracker"
+    }
+  ]
+}

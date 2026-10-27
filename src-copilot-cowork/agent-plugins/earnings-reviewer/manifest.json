@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.1.2",
+  "id": "ee3e3469-8920-5141-ab3a-fa31b0a2e0a4",
+  "packageName": "com.cowork.plugin.earnings-reviewer",
+  "developer": {
+    "name": "Cowork Conversion",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/terms",
+    "contactInfo": {
+      "defaultSupport": {
+        "emailsForEmailSupport": [
+          "earnings-reviewer@contoso.com"
+        ],
+        "userEmailsForChatSupport": [
+          "earnings-reviewer@contoso.com"
+        ]
+      }
+    }
+  },
+  "name": {
+    "short": "Earnings Reviewer",
+    "full": "Earnings Reviewer"
+  },
+  "description": {
+    "short": "Earnings call and filings to model update to note draft",
+    "full": "Earnings call and filings to model update to note draft"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4A90D9",
+  "agentSkills": [
+    {
+      "folder": "./skills/audit-xls"
+    },
+    {
+      "folder": "./skills/earnings-analysis"
+    },
+    {
+      "folder": "./skills/earnings-preview"
+    },
+    {
+      "folder": "./skills/model-update"
+    },
+    {
+      "folder": "./skills/morning-note"
+    },
+    {
+      "folder": "./skills/xlsx-author"
+    }
+  ]
+}

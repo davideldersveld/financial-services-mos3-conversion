@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.1.1",
+  "id": "73e6dd62-e796-58ea-869e-7917e722ff1f",
+  "packageName": "com.cowork.plugin.month-end-closer",
+  "developer": {
+    "name": "Cowork Conversion",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/terms",
+    "contactInfo": {
+      "defaultSupport": {
+        "emailsForEmailSupport": [
+          "month-end-closer@contoso.com"
+        ],
+        "userEmailsForChatSupport": [
+          "month-end-closer@contoso.com"
+        ]
+      }
+    }
+  },
+  "name": {
+    "short": "Month End Closer",
+    "full": "Month End Closer"
+  },
+  "description": {
+    "short": "Accruals, roll-forwards, variance commentary",
+    "full": "Accruals, roll-forwards, variance commentary"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4A90D9",
+  "agentSkills": [
+    {
+      "folder": "./skills/accrual-schedule"
+    },
+    {
+      "folder": "./skills/audit-xls"
+    },
+    {
+      "folder": "./skills/roll-forward"
+    },
+    {
+      "folder": "./skills/variance-commentary"
+    },
+    {
+      "folder": "./skills/xlsx-author"
+    }
+  ]
+}

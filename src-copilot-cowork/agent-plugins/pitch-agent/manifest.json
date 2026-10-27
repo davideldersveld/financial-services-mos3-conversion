@@ -1,0 +1,71 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.1.2",
+  "id": "e431e5b9-df52-500c-b5b8-763d314c0867",
+  "packageName": "com.cowork.plugin.pitch-agent",
+  "developer": {
+    "name": "Cowork Conversion",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/terms",
+    "contactInfo": {
+      "defaultSupport": {
+        "emailsForEmailSupport": [
+          "pitch-agent@contoso.com"
+        ],
+        "userEmailsForChatSupport": [
+          "pitch-agent@contoso.com"
+        ]
+      }
+    }
+  },
+  "name": {
+    "short": "Pitch Agent",
+    "full": "Pitch Agent"
+  },
+  "description": {
+    "short": "Comps, precedents, LBO to a branded pitch deck, end to end",
+    "full": "Comps, precedents, LBO to a branded pitch deck, end to end"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4A90D9",
+  "agentSkills": [
+    {
+      "folder": "./skills/3-statement-model"
+    },
+    {
+      "folder": "./skills/audit-xls"
+    },
+    {
+      "folder": "./skills/comps-analysis"
+    },
+    {
+      "folder": "./skills/dcf-model"
+    },
+    {
+      "folder": "./skills/deck-refresh"
+    },
+    {
+      "folder": "./skills/ib-check-deck"
+    },
+    {
+      "folder": "./skills/lbo-model"
+    },
+    {
+      "folder": "./skills/pitch-deck"
+    },
+    {
+      "folder": "./skills/pptx-author"
+    },
+    {
+      "folder": "./skills/sector-overview"
+    },
+    {
+      "folder": "./skills/xlsx-author"
+    }
+  ]
+}

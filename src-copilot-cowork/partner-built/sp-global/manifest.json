@@ -1,0 +1,63 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.0.3",
+  "id": "349e6718-0728-5de6-9274-59ae4db97820",
+  "packageName": "com.cowork.plugin.sp-global",
+  "developer": {
+    "name": "Cowork Conversion",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/terms",
+    "contactInfo": {
+      "defaultSupport": {
+        "emailsForEmailSupport": [
+          "spglobal-agent-skills-maintainers@kensho.com"
+        ],
+        "userEmailsForChatSupport": [
+          "spglobal-agent-skills-maintainers@kensho.com"
+        ]
+      }
+    }
+  },
+  "name": {
+    "short": "Sp Global",
+    "full": "Sp Global"
+  },
+  "description": {
+    "short": "S&P Global - Financial data and analytics skills including company tearsheets,",
+    "full": "S&P Global - Financial data and analytics skills including company tearsheets, earnings previews, and transaction summaries"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4A90D9",
+  "agentSkills": [
+    {
+      "folder": "./skills/earnings-preview-beta"
+    },
+    {
+      "folder": "./skills/funding-digest"
+    },
+    {
+      "folder": "./skills/tear-sheet"
+    }
+  ],
+  "agentConnectors": [
+    {
+      "description": "Remote MCP server providing tools for sp-global",
+      "displayName": "spglobal MCP Server",
+      "id": "spglobal",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://kfinance.kensho.com/integrations/mcp",
+          "authorization": {
+            "type": "OAuthPluginVault",
+            "referenceId": "sp-global-spglobal-auth"
+          }
+        }
+      }
+    }
+  ]
+}

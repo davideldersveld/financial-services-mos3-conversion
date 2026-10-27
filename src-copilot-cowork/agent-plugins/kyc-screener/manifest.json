@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.1.1",
+  "id": "8b5da7cc-acbf-537a-ad23-511cba13852e",
+  "packageName": "com.cowork.plugin.kyc-screener",
+  "developer": {
+    "name": "Cowork Conversion",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/terms",
+    "contactInfo": {
+      "defaultSupport": {
+        "emailsForEmailSupport": [
+          "kyc-screener@contoso.com"
+        ],
+        "userEmailsForChatSupport": [
+          "kyc-screener@contoso.com"
+        ]
+      }
+    }
+  },
+  "name": {
+    "short": "Kyc Screener",
+    "full": "Kyc Screener"
+  },
+  "description": {
+    "short": "Parses onboarding docs, runs the rules engine, flags gaps",
+    "full": "Parses onboarding docs, runs the rules engine, flags gaps"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4A90D9",
+  "agentSkills": [
+    {
+      "folder": "./skills/kyc-doc-parse"
+    },
+    {
+      "folder": "./skills/kyc-rules"
+    },
+    {
+      "folder": "./skills/xlsx-author"
+    }
+  ]
+}

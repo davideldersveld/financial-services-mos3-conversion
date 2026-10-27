@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.1.1",
+  "id": "cb2098cb-e50f-524c-830a-9b71a25a036d",
+  "packageName": "com.cowork.plugin.operations",
+  "developer": {
+    "name": "Cowork Conversion",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/terms",
+    "contactInfo": {
+      "defaultSupport": {
+        "emailsForEmailSupport": [
+          "operations@contoso.com"
+        ],
+        "userEmailsForChatSupport": [
+          "operations@contoso.com"
+        ]
+      }
+    }
+  },
+  "name": {
+    "short": "Operations",
+    "full": "Operations"
+  },
+  "description": {
+    "short": "Operational workflows: KYC document parsing and rules-grid evaluation",
+    "full": "Operational workflows: KYC document parsing and rules-grid evaluation"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4A90D9",
+  "agentSkills": [
+    {
+      "folder": "./skills/kyc-doc-parse"
+    },
+    {
+      "folder": "./skills/kyc-rules"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.1.1",
+  "id": "7fa399e8-7269-58ca-81d6-4e0268aa27d3",
+  "packageName": "com.cowork.plugin.fund-admin",
+  "developer": {
+    "name": "Cowork Conversion",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/terms",
+    "contactInfo": {
+      "defaultSupport": {
+        "emailsForEmailSupport": [
+          "fund-admin@contoso.com"
+        ],
+        "userEmailsForChatSupport": [
+          "fund-admin@contoso.com"
+        ]
+      }
+    }
+  },
+  "name": {
+    "short": "Fund Admin",
+    "full": "Fund Admin"
+  },
+  "description": {
+    "short": "Fund administration and finance ops skills: GL reconciliation, break tracing,",
+    "full": "Fund administration and finance ops skills: GL reconciliation, break tracing, accruals, roll-forwards, variance commentary, NAV tie-out"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4A90D9",
+  "agentSkills": [
+    {
+      "folder": "./skills/accrual-schedule"
+    },
+    {
+      "folder": "./skills/break-trace"
+    },
+    {
+      "folder": "./skills/gl-recon"
+    },
+    {
+      "folder": "./skills/nav-tieout"
+    },
+    {
+      "folder": "./skills/roll-forward"
+    },
+    {
+      "folder": "./skills/variance-commentary"
+    }
+  ]
+}

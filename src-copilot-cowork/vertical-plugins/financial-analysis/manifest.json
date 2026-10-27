@@ -1,0 +1,219 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.1.3",
+  "id": "cf426e66-b9d1-588b-af3d-d133dea7367c",
+  "packageName": "com.cowork.plugin.financial-analysis",
+  "developer": {
+    "name": "Cowork Conversion",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/terms",
+    "contactInfo": {
+      "defaultSupport": {
+        "emailsForEmailSupport": [
+          "financial-analysis@contoso.com"
+        ],
+        "userEmailsForChatSupport": [
+          "financial-analysis@contoso.com"
+        ]
+      }
+    }
+  },
+  "name": {
+    "short": "Financial Analysis",
+    "full": "Financial Analysis"
+  },
+  "description": {
+    "short": "Core financial modeling and analysis tools: DCF, comps, LBO, 3-statement models,",
+    "full": "Core financial modeling and analysis tools: DCF, comps, LBO, 3-statement models, competitive analysis, and deck QC"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4A90D9",
+  "agentSkills": [
+    {
+      "folder": "./skills/3-statement-model"
+    },
+    {
+      "folder": "./skills/audit-xls"
+    },
+    {
+      "folder": "./skills/clean-data-xls"
+    },
+    {
+      "folder": "./skills/competitive-analysis"
+    },
+    {
+      "folder": "./skills/comps-analysis"
+    },
+    {
+      "folder": "./skills/dcf-model"
+    },
+    {
+      "folder": "./skills/deck-refresh"
+    },
+    {
+      "folder": "./skills/ib-check-deck"
+    },
+    {
+      "folder": "./skills/lbo-model"
+    },
+    {
+      "folder": "./skills/ppt-template-creator"
+    },
+    {
+      "folder": "./skills/pptx-author"
+    },
+    {
+      "folder": "./skills/skill-creator"
+    },
+    {
+      "folder": "./skills/xlsx-author"
+    }
+  ],
+  "agentConnectors": [
+    {
+      "description": "Remote MCP server providing tools for financial-analysis",
+      "displayName": "aiera MCP Server",
+      "id": "aiera",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://mcp-pub.aiera.com",
+          "authorization": {
+            "type": "OAuthPluginVault",
+            "referenceId": "financial-analysis-aiera-auth"
+          }
+        }
+      }
+    },
+    {
+      "description": "Remote MCP server providing tools for financial-analysis",
+      "displayName": "chronograph MCP Server",
+      "id": "chronograph",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://ai.chronograph.pe/mcp",
+          "authorization": {
+            "type": "OAuthPluginVault",
+            "referenceId": "financial-analysis-chronograph-auth"
+          }
+        }
+      }
+    },
+    {
+      "description": "Remote MCP server providing tools for financial-analysis",
+      "displayName": "daloopa MCP Server",
+      "id": "daloopa",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://mcp.daloopa.com/server/mcp",
+          "authorization": {
+            "type": "OAuthPluginVault",
+            "referenceId": "financial-analysis-daloopa-auth"
+          }
+        }
+      }
+    },
+    {
+      "description": "Remote MCP server providing tools for financial-analysis",
+      "displayName": "factset MCP Server",
+      "id": "factset",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://mcp.factset.com/mcp",
+          "authorization": {
+            "type": "OAuthPluginVault",
+            "referenceId": "financial-analysis-factset-auth"
+          }
+        }
+      }
+    },
+    {
+      "description": "Remote MCP server providing tools for financial-analysis",
+      "displayName": "lseg MCP Server",
+      "id": "lseg",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://api.analytics.lseg.com/lfa/mcp",
+          "authorization": {
+            "type": "OAuthPluginVault",
+            "referenceId": "financial-analysis-lseg-auth"
+          }
+        }
+      }
+    },
+    {
+      "description": "Remote MCP server providing tools for financial-analysis",
+      "displayName": "moodys MCP Server",
+      "id": "moodys",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://api.moodys.com/genai-ready-data/m1/mcp",
+          "authorization": {
+            "type": "OAuthPluginVault",
+            "referenceId": "financial-analysis-moodys-auth"
+          }
+        }
+      }
+    },
+    {
+      "description": "Remote MCP server providing tools for financial-analysis",
+      "displayName": "morningstar MCP Server",
+      "id": "morningstar",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://mcp.morningstar.com/mcp",
+          "authorization": {
+            "type": "OAuthPluginVault",
+            "referenceId": "financial-analysis-morningstar-auth"
+          }
+        }
+      }
+    },
+    {
+      "description": "Remote MCP server providing tools for financial-analysis",
+      "displayName": "mtnewswire MCP Server",
+      "id": "mtnewswire",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://vast-mcp.blueskyapi.com/mtnewswires",
+          "authorization": {
+            "type": "OAuthPluginVault",
+            "referenceId": "financial-analysis-mtnewswire-auth"
+          }
+        }
+      }
+    },
+    {
+      "description": "Remote MCP server providing tools for financial-analysis",
+      "displayName": "pitchbook MCP Server",
+      "id": "pitchbook",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://premium.mcp.pitchbook.com/mcp",
+          "authorization": {
+            "type": "OAuthPluginVault",
+            "referenceId": "financial-analysis-pitchbook-auth"
+          }
+        }
+      }
+    },
+    {
+      "description": "Remote MCP server providing tools for financial-analysis",
+      "displayName": "sp-global MCP Server",
+      "id": "sp-global",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://kfinance.kensho.com/integrations/mcp",
+          "authorization": {
+            "type": "OAuthPluginVault",
+            "referenceId": "financial-analysis-sp-global-auth"
+          }
+        }
+      }
+    }
+  ]
+}

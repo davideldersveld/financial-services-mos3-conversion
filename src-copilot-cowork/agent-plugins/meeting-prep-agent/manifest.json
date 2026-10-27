@@ -1,0 +1,50 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.1.2",
+  "id": "1e5648b0-6f2b-5a2a-8fbc-11e6a508330f",
+  "packageName": "com.cowork.plugin.meeting-prep-agent",
+  "developer": {
+    "name": "Cowork Conversion",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/terms",
+    "contactInfo": {
+      "defaultSupport": {
+        "emailsForEmailSupport": [
+          "meeting-prep-agent@contoso.com"
+        ],
+        "userEmailsForChatSupport": [
+          "meeting-prep-agent@contoso.com"
+        ]
+      }
+    }
+  },
+  "name": {
+    "short": "Meeting Prep Agent",
+    "full": "Meeting Prep Agent"
+  },
+  "description": {
+    "short": "Briefing pack before every client meeting",
+    "full": "Briefing pack before every client meeting"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4A90D9",
+  "agentSkills": [
+    {
+      "folder": "./skills/client-report"
+    },
+    {
+      "folder": "./skills/client-review"
+    },
+    {
+      "folder": "./skills/investment-proposal"
+    },
+    {
+      "folder": "./skills/pptx-author"
+    }
+  ]
+}

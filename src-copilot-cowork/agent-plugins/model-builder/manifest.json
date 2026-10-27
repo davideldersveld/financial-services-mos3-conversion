@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.1.1",
+  "id": "f03c3219-41bc-5255-829f-1081d99e56a9",
+  "packageName": "com.cowork.plugin.model-builder",
+  "developer": {
+    "name": "Cowork Conversion",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/terms",
+    "contactInfo": {
+      "defaultSupport": {
+        "emailsForEmailSupport": [
+          "model-builder@contoso.com"
+        ],
+        "userEmailsForChatSupport": [
+          "model-builder@contoso.com"
+        ]
+      }
+    }
+  },
+  "name": {
+    "short": "Model Builder",
+    "full": "Model Builder"
+  },
+  "description": {
+    "short": "DCF, LBO, 3-statement, comps - live in Excel",
+    "full": "DCF, LBO, 3-statement, comps - live in Excel"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4A90D9",
+  "agentSkills": [
+    {
+      "folder": "./skills/3-statement-model"
+    },
+    {
+      "folder": "./skills/audit-xls"
+    },
+    {
+      "folder": "./skills/comps-analysis"
+    },
+    {
+      "folder": "./skills/dcf-model"
+    },
+    {
+      "folder": "./skills/lbo-model"
+    },
+    {
+      "folder": "./skills/xlsx-author"
+    }
+  ]
+}

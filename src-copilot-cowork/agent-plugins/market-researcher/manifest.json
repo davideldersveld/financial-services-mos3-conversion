@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.1.2",
+  "id": "1c983ba6-0568-5f44-9c2f-e88d21d6e407",
+  "packageName": "com.cowork.plugin.market-researcher",
+  "developer": {
+    "name": "Cowork Conversion",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/terms",
+    "contactInfo": {
+      "defaultSupport": {
+        "emailsForEmailSupport": [
+          "market-researcher@contoso.com"
+        ],
+        "userEmailsForChatSupport": [
+          "market-researcher@contoso.com"
+        ]
+      }
+    }
+  },
+  "name": {
+    "short": "Market Researcher",
+    "full": "Market Researcher"
+  },
+  "description": {
+    "short": "Sector or theme to industry overview, competitive landscape, peer comps, and",
+    "full": "Sector or theme to industry overview, competitive landscape, peer comps, and ideas shortlist"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4A90D9",
+  "agentSkills": [
+    {
+      "folder": "./skills/competitive-analysis"
+    },
+    {
+      "folder": "./skills/comps-analysis"
+    },
+    {
+      "folder": "./skills/idea-generation"
+    },
+    {
+      "folder": "./skills/pptx-author"
+    },
+    {
+      "folder": "./skills/sector-overview"
+    }
+  ]
+}

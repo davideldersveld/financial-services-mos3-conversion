@@ -1,0 +1,50 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.1.2",
+  "id": "67b076d3-4d16-5230-8fec-ea36bd670626",
+  "packageName": "com.cowork.plugin.valuation-reviewer",
+  "developer": {
+    "name": "Cowork Conversion",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/terms",
+    "contactInfo": {
+      "defaultSupport": {
+        "emailsForEmailSupport": [
+          "valuation-reviewer@contoso.com"
+        ],
+        "userEmailsForChatSupport": [
+          "valuation-reviewer@contoso.com"
+        ]
+      }
+    }
+  },
+  "name": {
+    "short": "Valuation Reviewer",
+    "full": "Valuation Reviewer"
+  },
+  "description": {
+    "short": "Ingests GP packages, runs valuation template, stages LP reporting",
+    "full": "Ingests GP packages, runs valuation template, stages LP reporting"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4A90D9",
+  "agentSkills": [
+    {
+      "folder": "./skills/ic-memo"
+    },
+    {
+      "folder": "./skills/portfolio-monitoring"
+    },
+    {
+      "folder": "./skills/returns-analysis"
+    },
+    {
+      "folder": "./skills/xlsx-author"
+    }
+  ]
+}

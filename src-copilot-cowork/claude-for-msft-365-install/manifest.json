@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.1.14",
+  "id": "8b8a7c5a-88d5-5cce-9b27-23605b1d991b",
+  "packageName": "com.cowork.plugin.claude-for-msft-365-install",
+  "developer": {
+    "name": "Cowork Conversion",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/terms",
+    "contactInfo": {
+      "defaultSupport": {
+        "emailsForEmailSupport": [
+          "support@anthropic.com"
+        ],
+        "userEmailsForChatSupport": [
+          "support@anthropic.com"
+        ]
+      }
+    }
+  },
+  "name": {
+    "short": "Claude For Msft 365 Install",
+    "full": "Claude For Msft 365 Install"
+  },
+  "description": {
+    "short": "Provision direct cloud access (Vertex AI, Bedrock, Azure AI Foundry, or LLM",
+    "full": "Provision direct cloud access (Vertex AI, Bedrock, Azure AI Foundry, or LLM gateway) for the Claude Office add-in. Generates the customized add-in manifest, walks through Azure admin consent, and writes per-user config via Microsoft Graph extension attributes."
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4A90D9",
+  "agentSkills": []
+}

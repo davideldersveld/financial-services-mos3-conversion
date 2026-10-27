@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.0.2",
+  "id": "a52e950b-fdc8-5f66-8159-ceb737502986",
+  "packageName": "com.cowork.plugin.lseg",
+  "developer": {
+    "name": "Cowork Conversion",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/terms",
+    "contactInfo": {
+      "defaultSupport": {
+        "emailsForEmailSupport": [
+          "lseg@contoso.com"
+        ],
+        "userEmailsForChatSupport": [
+          "lseg@contoso.com"
+        ]
+      }
+    }
+  },
+  "name": {
+    "short": "Lseg",
+    "full": "Lseg"
+  },
+  "description": {
+    "short": "Price bonds, analyze yield curves, evaluate FX carry trades, value options, and",
+    "full": "Price bonds, analyze yield curves, evaluate FX carry trades, value options, and build macro dashboards using LSEG financial data and analytics."
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4A90D9",
+  "agentSkills": [
+    {
+      "folder": "./skills/bond-futures-basis"
+    },
+    {
+      "folder": "./skills/bond-relative-value"
+    },
+    {
+      "folder": "./skills/equity-research"
+    },
+    {
+      "folder": "./skills/fixed-income-portfolio"
+    },
+    {
+      "folder": "./skills/fx-carry-trade"
+    },
+    {
+      "folder": "./skills/macro-rates-monitor"
+    },
+    {
+      "folder": "./skills/option-vol-analysis"
+    },
+    {
+      "folder": "./skills/swap-curve-strategy"
+    }
+  ],
+  "agentConnectors": [
+    {
+      "description": "Remote MCP server providing tools for lseg",
+      "displayName": "lseg MCP Server",
+      "id": "lseg",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://api.analytics.lseg.com/lfa/mcp/server-cl",
+          "authorization": {
+            "type": "OAuthPluginVault",
+            "referenceId": "lseg-lseg-auth"
+          }
+        }
+      }
+    }
+  ]
+}

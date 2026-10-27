@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.1.1",
+  "id": "1f2ec8a0-7ae5-5048-bdca-39681e306aab",
+  "packageName": "com.cowork.plugin.statement-auditor",
+  "developer": {
+    "name": "Cowork Conversion",
+    "websiteUrl": "https://contoso.com",
+    "privacyUrl": "https://contoso.com/privacy",
+    "termsOfUseUrl": "https://contoso.com/terms",
+    "contactInfo": {
+      "defaultSupport": {
+        "emailsForEmailSupport": [
+          "statement-auditor@contoso.com"
+        ],
+        "userEmailsForChatSupport": [
+          "statement-auditor@contoso.com"
+        ]
+      }
+    }
+  },
+  "name": {
+    "short": "Statement Auditor",
+    "full": "Statement Auditor"
+  },
+  "description": {
+    "short": "Audits pre-generated LP statements before distribution",
+    "full": "Audits pre-generated LP statements before distribution"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#4A90D9",
+  "agentSkills": [
+    {
+      "folder": "./skills/audit-xls"
+    },
+    {
+      "folder": "./skills/nav-tieout"
+    },
+    {
+      "folder": "./skills/xlsx-author"
+    }
+  ]
+}

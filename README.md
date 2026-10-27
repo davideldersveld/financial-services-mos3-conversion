@@ -1,16 +1,45 @@
-# Claude for Financial Services
+# Financial Services Agents for Claude and Microsoft 365 Copilot Cowork
 
 Reference agents, skills, and data connectors for the financial-services workflows we see most — investment banking, equity research, private equity, and wealth management.
 
-Everything here is available **two ways from one source**: install it as a [Claude Cowork](https://claude.com/product/cowork) plugin, or deploy it through the [Claude Managed Agents API](https://docs.claude.com/en/api/managed-agents) behind your own workflow engine. Same system prompt, same skills — you choose where it runs.
+This fork preserves the original Claude implementations and adds converted Microsoft 365 Copilot Cowork packages. The original source remains available as a [Claude Cowork](https://claude.com/product/cowork) plugin or through the [Claude Managed Agents API](https://docs.claude.com/en/api/managed-agents); the converted source and upload-ready MOS3 packages provide a parallel path for Microsoft 365 Copilot Cowork.
 
 > [!IMPORTANT]
 > Nothing in this repository constitutes investment, legal, tax, or accounting advice. These agents draft analyst work product — models, memos, research notes, reconciliations — for review by a qualified professional. They do not make investment recommendations, execute transactions, bind risk, post to a ledger, or approve onboarding; every output is staged for human sign-off. You are responsible for verifying outputs and for compliance with the laws and regulations that apply to your firm.
+
+## Evolution to Microsoft 365 Copilot Cowork
+
+The upstream repository was authored for Claude plugins and Claude Managed Agents. This fork evolves that work into a dual-platform repository by converting each plugin into the Microsoft 365 Copilot Cowork MOS3 package format while retaining the original Claude assets for comparison and continued upstream synchronization.
+
+The conversion adds:
+
+- MOS3 `manifest.json` files with valid app versions, deterministic app IDs, support metadata, and Microsoft 365 Copilot Cowork skill references.
+- Expanded, reviewable package sources under [`src-copilot-cowork/`](./src-copilot-cowork).
+- Upload-ready ZIP packages under [`dist-copilot-cowork/`](./dist-copilot-cowork).
+- Original finance-themed package icons sized at 192×192 and 96 DPI.
+- Cowork-compatible skill frontmatter and folder/name alignment.
+- A maximum of 10 remote MCP connectors per app. The converted `financial-analysis` package retains the 10 finance and market-data connectors and omits the Box and Egnyte document-storage connectors to satisfy the MOS3 schema limit.
+
+The converted packages use `Cowork Conversion` as the developer name and placeholder `contoso.com` website, privacy, terms, and fallback support values. Replace those placeholders with production publisher information before external distribution.
+
+> [!WARNING]
+> Fifteen source `SKILL.md` files exceed the current 20,000-character Cowork ingestion limit. They are intentionally preserved without summarization in this conversion, so packages containing those skills may require further editing before publication.
+
+### Converted package layout
+
+| Category | Expanded MOS3 source |
+|---|---|
+| Agent plugins | `src-copilot-cowork/agent-plugins/<plugin>/` |
+| Vertical plugins | `src-copilot-cowork/vertical-plugins/<plugin>/` |
+| Partner-built plugins | `src-copilot-cowork/partner-built/<plugin>/` |
+| Microsoft 365 install tooling | `src-copilot-cowork/claude-for-msft-365-install/` |
+| Upload-ready packages | `dist-copilot-cowork/*-mos3-<version>.zip` |
 
 What's in the repo:
 
 - **[Agents](#agents)** — named, end-to-end workflow agents (Pitch Agent, Market Researcher, GL Reconciler, …). Each ships as a Cowork plugin **and** as a [Claude Managed Agent template](./managed-agent-cookbooks) you deploy via `/v1/agents`.
 - **[Vertical plugins](#vertical-plugins)** — the underlying skills, slash commands, and data connectors, bundled by FSI vertical. Install these on their own if you just want `/comps`, `/dcf`, `/earnings` and the connectors without a full agent.
+- **[Microsoft 365 Copilot Cowork packages](#microsoft-365-copilot-cowork)** — converted MOS3 source packages and upload-ready ZIPs.
 
 ## Agents
 
@@ -42,6 +71,11 @@ plugins/
   partner-built/               # Partner-authored plugins (LSEG, S&P Global)
 managed-agent-cookbooks/       # Claude Managed Agent cookbooks — one dir per agent
 claude-for-msft-365-install/   # Admin tooling to provision the Claude Microsoft 365 add-in
+src-copilot-cowork/            # Expanded Microsoft 365 Copilot Cowork MOS3 package sources
+  agent-plugins/
+  vertical-plugins/
+  partner-built/
+dist-copilot-cowork/           # Upload-ready Microsoft 365 Copilot Cowork ZIP packages
 scripts/                       # deploy-managed-agent.sh · check.py · validate.py · orchestrate.py · sync-agent-skills.py
 ```
 
@@ -74,6 +108,17 @@ claude plugin install equity-research@claude-for-financial-services
 ```
 
 Once installed, agents appear in Cowork dispatch, skills fire automatically when relevant, and slash commands are available in your session (`/comps`, `/dcf`, `/earnings`, `/ic-memo`, …).
+
+### Microsoft 365 Copilot Cowork
+
+The converted packages are ready for review and upload from [`dist-copilot-cowork/`](./dist-copilot-cowork):
+
+1. Select the ZIP for the agent or vertical you want.
+2. Upload it through the Microsoft 365 Copilot Cowork plugin publishing experience.
+3. Configure each MCP connector's credential reference in the Developer Portal.
+4. Validate the package against your tenant's current schema and policies before publishing.
+
+To inspect or customize a package first, edit its matching directory under [`src-copilot-cowork/`](./src-copilot-cowork), increment the manifest version, and rebuild the ZIP with the contents of that package directory at the archive root.
 
 ### Claude Managed Agents
 
